@@ -1,87 +1,143 @@
-const resume=`
-JANE DOE
-Software Engineer
-San Francisco, CA 94105
-jane.doe@email.com | (555) 123-4567
+const jobDescription=`
+Junior Full Stack Developer – Job Description
 
-PROFESSIONAL SUMMARY
-Dedicated Software Engineer with 5 years of experience specializing in backend systems and functional web interfaces. Proven track record in migrating monolithic systems to microservices and optimizing database performance. Seeking to leverage strong Node.js and React skills in a Senior Full-Stack role.
+Job Title: Junior Full Stack Developer
+Experience: 0–2 Years
+Location: Remote / Hybrid
+Employment Type: Full-time
 
-SKILLS
-* Languages: Python, JavaScript, Java, 
-* Frameworks: React, Node.js, Express, Django
-* Databases:  MongoDB
-* DevOps: Git, Docker, basic AWS (EC2, S3)
+About the Role
 
-EXPERIENCE
-Software Engineer | TechNova Solutions
-Jan 2022 – Present
-* Developed RESTful APIs using Node.js for a high-traffic e-commerce platform.
-* Successfully moved core services from a monolith to Docker containers.
-* Improved database query speed by 20% through indexing and schema redesign.
-* Assisted in onboarding two junior developers and participated in code reviews.
+We are looking for a passionate Junior Full Stack Developer to join our development team. The ideal candidate should be eager to learn, build scalable applications, and work across both front-end and back-end technologies.
 
-Web Developer | Innovatech Software
-Jun 2019 – Dec 2021
-* Built front-end components using React and plain CSS.
-* Integrated Stripe API for payment processing.
-* Wrote unit tests using Jest to ensure code reliability.
-* Worked in an Agile environment with bi-weekly sprints.
+Key Responsibilities
 
-EDUCATION
-BS in Computer Science | University of Texas at Austin
-Graduated: May 2019
+Develop and maintain web applications using modern front-end and back-end technologies.
+
+Build responsive user interfaces using HTML, CSS, and JavaScript frameworks.
+
+Design and develop REST APIs and integrate them with front-end services.
+
+Work with databases to store, retrieve, and manage application data.
+
+Collaborate with designers and other developers to deliver high-quality software.
+
+Debug, test, and optimize applications for performance and scalability.
+
+Participate in code reviews and follow best coding practices.
+
+Required Skills
+
+Proficiency in HTML, CSS, JavaScript
+
+Experience with React.js or similar front-end frameworks
+
+Knowledge of Node.js and Express.js
+
+Understanding of REST APIs
+
+Familiarity with Git and GitHub
+
+Basic knowledge of databases such as MongoDB or MySQL
+
+Preferred Skills
+
+Understanding of authentication systems (JWT, OAuth)
+
+Familiarity with cloud platforms or deployment tools
+
+Basic knowledge of Docker or CI/CD pipelines
+
+Education
+
+Bachelor’s degree in Computer Science, Information Technology, or related field (or equivalent practical experience).
+
+What We Offer
+
+Opportunity to work on real-world projects
+
+Mentorship and learning opportunities
+
+Collaborative development environment
+
+Career growth and skill development
+
+If you want, I can also give you a more realistic startup-style job description like companies post on LinkedIn (looks more authentic for demos).
+
+yes
+
+Here is a more realistic startup-style Junior Full Stack Developer job description like you usually see on LinkedIn or job portals. This looks much better for demo projects or portfolio apps.
+
+Junior Full Stack Developer (Fresher / 0–2 Years)
+
+Location: Remote / India
+Type: Full-Time
+
+About the Company
+
+We are a fast-growing technology startup focused on building scalable web applications and AI-powered products. Our team is passionate about solving real-world problems using modern technologies and delivering high-quality user experiences.
+
+Role Overview
+
+We are looking for a Junior Full Stack Developer who is enthusiastic about building modern web applications. You will work closely with senior developers, designers, and product managers to develop and maintain features across the entire technology stack.
+
+Responsibilities
+
+Develop and maintain full stack web applications.
+
+Build interactive user interfaces using React.js or other modern JavaScript frameworks.
+
+Develop backend services using Node.js and Express.js.
+
+Design and integrate RESTful APIs.
+
+Work with databases such as MongoDB or PostgreSQL.
+
+Write clean, maintainable, and efficient code.
+
+Participate in code reviews and debugging.
+
+Collaborate with cross-functional teams to ship new features.
+
+Required Skills
+
+Strong knowledge of JavaScript, HTML, and CSS.
+
+Experience with React.js or similar frontend frameworks.
+
+Basic understanding of Node.js and backend development.
+
+Familiarity with Git and version control workflows.
+
+Knowledge of databases like MongoDB / MySQL / PostgreSQL.
+
+Understanding of basic software development principles.
+
+Good to Have
+
+Experience with TypeScript.
+
+Familiarity with Docker or containerization.
+
+Basic understanding of cloud platforms (AWS, GCP, or Azure).
+
+Knowledge of authentication systems (JWT, OAuth).
+
+What We Offer
+
+Opportunity to work on real-world scalable products.
+
+Learning environment with mentorship from experienced engineers.
+
+Flexible working hours and remote-friendly culture.
+
+Career growth opportunities in a fast-paced startup.
 `
 
 const selfDescription=`
-I am a dedicated Software Engineer with over five years of experience specializing in building robust, scalable web applications. My professional journey has been defined by a deep-seated passion for solving complex architectural challenges and a commitment to delivering high-quality, user-centric products. Having worked across diverse industries, I have developed a versatile skill set that allows me to navigate both front-end aesthetics and back-end logic with precision and efficiency.
+I am a passionate Junior Full Stack Developer with a strong interest in building scalable and user-friendly web applications. I enjoy working across both frontend and backend technologies, turning ideas into functional digital products.
 
-My technical philosophy centers on the belief that clean, maintainable code is the foundation of any successful digital product. I take pride in writing elegant solutions that not only meet immediate business requirements but are also built to evolve alongside shifting technology landscapes. I am a strong advocate for Agile methodologies, test-driven development, and collaborative environments where open communication and peer mentorship drive the entire team toward technical excellence.
+I have experience working with JavaScript, React.js, Node.js, Express.js, and MongoDB, and I am comfortable building complete web applications from UI design to backend APIs and database integration. I focus on writing clean, maintainable code and continuously improving my development skills.
 
-Beyond my core engineering responsibilities, I am a lifelong learner who remains deeply curious about the future of technology. I actively contribute to open-source projects and stay at the forefront of industry trends, from cloud-native infrastructure to emerging AI integrations. When I am not at my desk, I focus on personal growth through creative hobbies and outdoor exploration, which helps me maintain a fresh perspective and a high level of creative energy for my professional work.
+I enjoy solving problems, learning new technologies, and building projects that solve real-world challenges. I am currently looking for opportunities where I can contribute to a team, grow as a developer, and gain hands-on experience working on real production systems.
 `
-
-const jobDescription=`
-### JOB TITLE: SENIOR FULL-STACK ENGINEER (REMOTE)
-
-#### ROLE OVERVIEW
-We are seeking a highly skilled and motivated Senior Full-Stack Engineer to join our core product team. In this role, you will be responsible for designing, developing, and maintaining high-performance web applications that serve millions of users. You will work closely with product managers, designers, and other engineers to translate complex requirements into functional, scalable software. The ideal candidate is a problem-solver who thrives in a fast-paced environment and is passionate about clean code and modern architecture.
-
-#### KEY RESPONSIBILITIES
-* Lead the end-to-end development of new features, from initial database schema design to front-end implementation.
-* Architect and maintain scalable backend services using Node.js and microservices architecture.
-* Build responsive, high-fidelity user interfaces using React and modern CSS frameworks.
-* Optimize application performance for maximum speed and scalability across various devices and browsers.
-* Collaborate with the DevOps team to manage CI/CD pipelines and cloud infrastructure on AWS.
-* Conduct thorough code reviews to ensure technical standards are met and to mentor junior-to-mid-level developers.
-* Troubleshoot, debug, and upgrade existing software systems to ensure 99.9% uptime.
-
-#### REQUIRED QUALIFICATIONS
-* Bachelor’s or Master’s degree in Computer Science, Engineering, or a related technical field.
-* 5+ years of professional experience in full-stack web development.
-* Expert proficiency in JavaScript/TypeScript and at least one backend language (Python, Go, or Java).
-* Extensive experience with React.js and state management libraries like Redux or Zustand.
-* Strong understanding of relational (PostgreSQL) and non-relational (MongoDB, Redis) databases.
-* Hands-on experience with Docker, Kubernetes, and cloud provider ecosystems (AWS/GCP/Azure).
-* Proven track record of building and consuming RESTful and GraphQL APIs.
-
-#### PREFERRED ATTRIBUTES
-* Experience with serverless architectures and Lambda functions.
-* Familiarity with automated testing frameworks such as Jest, Cypress, or Playwright.
-* Strong communication skills and the ability to explain technical concepts to non-technical stakeholders.
-* A proactive mindset with a focus on security best practices (OWASP).
-
-#### BENEFITS & PERKS
-* Competitive salary and performance-based equity packages.
-* Comprehensive health, dental, and vision insurance.
-* Flexible working hours and a "remote-first" company culture.
-* Annual professional development budget for certifications and conferences.
-* Paid parental leave and unlimited PTO policy.
-
-`
-
-module.exports={
-    resume,
-    selfDescription,
-    jobDescription,
-}
