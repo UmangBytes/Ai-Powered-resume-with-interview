@@ -1,6 +1,6 @@
 import { useContext, useEffect } from "react"
 
-import { getInterviewReportById,getAllInterviewReports,generateInterviewReport } from "../services/interview.api";
+import { getInterviewReportById,getAllInterviewReports,generateInterviewReport,generateResumePdf } from "../services/interview.api";
 import { InterviewContext } from "../interview.context";
 
 export const useInterview = () => {
@@ -13,6 +13,8 @@ export const useInterview = () => {
     }
 
     const {loading,setLoading,report,setReport,reports,setReports} = context;
+
+
 
     const generateReport=async({jobDescription,selfDescription,resumeFile})=>{
         setLoading(true);
@@ -84,29 +86,16 @@ export const useInterview = () => {
             setLoading(false);
         }
 
-        useEffect(()=>{
-
-            if(interviewId){
-                getReports();
-                getReportById(interviewId);
-            }
-
-            return()=>{
-                if(response){
-                    window.URL.revokeObjectURL(response);
-                }
-            }
-        },[])    
-
-        // useEffect(()=>{
-        //     try {
-        //         getReports();
-        //     } catch (error) {
-        //         console.log("errpr while getting reports:",error);
-                
-        //     }
-        // },[])
+       
 
     }
-    return {loading,report,reports,generateReport,getReportById,getReports};
+
+     useEffect(() => {
+        if (interviewId) {
+            getReportById(interviewId)
+        } else {
+            getReports()
+        }
+    }, [ interviewId ])
+    return {loading,report,reports,generateReport,getReportById,getReports,getResumePdf};
 }    

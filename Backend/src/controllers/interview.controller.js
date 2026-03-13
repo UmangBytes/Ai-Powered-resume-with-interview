@@ -50,7 +50,11 @@ async function generateInterviewReportController(req,res) {
 
 async function getInterviewReportByIdController(req,res) {
     const {interviewId}=req.params
-    const interviewReport=await interviewReportModel.findByOne({_id:interviewId,user:req.user.id})
+ 
+    
+    const interviewReport=await interviewReportModel.findOne({_id:interviewId})
+
+    
     if(!interviewReport) {
         return res.status(404).json({message:"Interview report not found"})
     }
@@ -73,8 +77,10 @@ async function getAllInterviewReportsController(req,res) {
 async function generateResumePdfController(req,res) {
 
     const {interviewReportId}=req.params
+    console.log("inside genrate resume controller");
+    
 
-    const  interviewReport=await interviewReportModel.findById({interviewReportId})
+    const  interviewReport=await interviewReportModel.findById(interviewReportId)
     if(!interviewReport) {
         return res.status(404).json({message:"Interview report not found"})
     }
@@ -91,7 +97,7 @@ async function generateResumePdfController(req,res) {
         "Content-Type":"application/pdf",
         "Content-Disposition":`attachment; filename=resume_${interviewReportId}.pdf`
     })
-    res.send(pdfBuffer)
+    return res.send(pdfBuffer)
 
 
 }

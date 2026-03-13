@@ -235,17 +235,28 @@ return JSON.parse(response.text)
 
 async function generatePdfFromHtml(htmlContent) {
  
-        const browser = await puppeteer.launch();
-        const page = await browser.newPage();
-        await page.setContent(htmlContent, 
-            { waitUntil: 'networkidle0' });
+async function generatePdfFromHtml(htmlContent) {
+    const browser = await puppeteer.launch();
+    const page = await browser.newPage();
+    await page.setContent(htmlContent, { waitUntil: 'networkidle0' });
 
-        const pdfBuffer = await page.pdf({ format: 'A4' });
+    const contentHeight = await page.evaluate(() => document.documentElement.scrollHeight);
 
-        await browser.close();
+    const pdfBuffer = await page.pdf({
+        width: '210mm',   
+        height: `${contentHeight}px`,  
+        printBackground: true,
+        margin: {
+            top: "20mm",
+            bottom: "20mm",
+            left: "15mm",
+            right: "15mm"
+        }
+    })
 
-        return pdfBuffer;
-
+    await browser.close();
+    return pdfBuffer;
+}
 }
 
 async function generateResumePdf({resume, selfDescription, jobDescription}) {
@@ -271,7 +282,7 @@ async function generateResumePdf({resume, selfDescription, jobDescription}) {
         contents: prompt,
         config: {
             responseMimeType: "application/json",
-            responseSchema: resumePdfSchema,
+            // responseSchema: resumePdfSchema,
         }
     })
 

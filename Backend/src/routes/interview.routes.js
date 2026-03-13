@@ -7,7 +7,7 @@ const interviewRouter=Router();
 
 
 interviewRouter.post("/",authUser,upload.single("resume"),generateInterviewReportController)
-interviewRouter.get("/report/:id",authUser,getInterviewReportByIdController)
+interviewRouter.get("/report/:interviewId",authUser,getInterviewReportByIdController)
 interviewRouter.get("/",authUser,getAllInterviewReportsController)
 interviewRouter.post("/resume/pdf/:interviewReportId",authUser,generateResumePdfController)
 

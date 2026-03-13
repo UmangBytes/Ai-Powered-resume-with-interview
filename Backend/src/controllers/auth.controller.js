@@ -3,13 +3,7 @@ const jwt=require('jsonwebtoken')
 const bcrypt=require('bcryptjs');
 const tokenBlacklistModel = require('../models/blacklist.model');
 
-/**
- * 
- * @name registerUser
- * @description register a new user
- * @access public 
- * 
- */
+
 async function registerUser(req,res) {
 
     const { username,email,password}=req.body;
